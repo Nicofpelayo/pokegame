@@ -5,7 +5,13 @@
     <article class="pokemon-card">
       <h3 class="pokemon-name">{{ pokemon.name }}</h3>
       <img class="pokemon-sprite" src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}">
-      <button class="catch-button" (click)="catchPokemon(pokemon)">Capturar</button>
+      @if(pokemon.caught) {
+          <img src="'../../assets/pokeball.png'" alt="Capturado">
+      }
+      @else{
+        
+          <button class="catch-button" (click)="catchPokemon(pokemon)">Capturar</button>
+      }
       <div *ngIf="catchMessage" class="catch-message">
         {{ catchMessage }}
       </div>

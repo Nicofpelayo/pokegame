@@ -48,7 +48,7 @@ export class Safari {
       console.log("Pokemon capturado")
       this.localStorageService.setCaughtPokemon(pokemon)
       this.catchMessage = `${pokemon.name} was caught! 🎉`;
-
+      pokemon.caught = true
       // Ocultar mensaje después de 3 segundos
     }
     else {
