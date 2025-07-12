@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Pokemon } from '../services/pokemonApi/pokemonApi.service';
 import { PokemonApiService } from '../services/pokemonApi/pokemonApi.service';
 import { inject } from '@angular/core';
@@ -7,7 +8,7 @@ import { LocalStorageService } from '../services/localStorage/local-storage.serv
 const NUMBER_OF_POKEMON = 1026;
 @Component({
   selector: 'app-safari',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './safari.html',
   styleUrl: './safari.css'
 })
@@ -16,6 +17,7 @@ export class Safari {
   pokeBallCount : number = 0;
   private pokemonService = inject(PokemonApiService)
   private localStorageService = inject(LocalStorageService)
+  catchMessage: string | null = null;
   ngOnInit (){this.generateWildPokemon()}
   generateWildPokemon(){
     this.pokeBallCount = 5
@@ -45,7 +47,18 @@ export class Safari {
     if (catchPower > 20){
       console.log("Pokemon capturado")
       this.localStorageService.setCaughtPokemon(pokemon)
+      this.catchMessage = `${pokemon.name} was caught! 🎉`;
+
+      // Ocultar mensaje después de 3 segundos
+    }
+    else {
+      console.log("Pokemon escape")
+      this.catchMessage = `${pokemon.name} escaped! 😢`;
     }
     this.pokeBallCount--;
+    setTimeout(() => {
+      this.catchMessage = null;
+    }, 3000);
+
   }
 }
