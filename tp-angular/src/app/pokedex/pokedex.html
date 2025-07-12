@@ -1,0 +1,27 @@
+<div class="pokedex-container">
+    <div class="pokedex-section">
+      <h1>Pokedex</h1>
+      <h2>Caught Pokemon</h2>
+      <div class="pokemon-list">
+        @for(pokemon of caughtPokemon; track pokemon.id) {
+            <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+        }
+      </div>
+    </div>
+  
+    @if(caughtShinyPokemon.length > 0) {
+      <div class="pokedex-section">
+        <h2>Caught Shiny Pokemon</h2>
+        <div class="pokemon-list">
+          @for(pokemon of caughtShinyPokemon; track pokemon.id) {
+              <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+          }
+        </div>
+      </div>
+    }
+  </div>
+  
+  <div class="pokedex-actions">
+    <button (click)="clearAllCaughtPokemon()">Limpiar</button>
+  </div>
+  

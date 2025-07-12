@@ -1,0 +1,13 @@
+<div class="pokemon-detail-container">
+    <section class="description-section">
+      <p class="pokemon-description">{{ description }}</p>
+    </section>
+  
+    <section class="data-section">
+      <h3 class="pokemon-id">#{{ pokemon.id }}</h3>
+      <img class="pokemon-image" src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}" />
+      <h2 class="pokemon-name">{{ pokemon.name }}</h2>
+      <p class="pokemon-types">Tipo: {{ pokemon.type.join(', ') }}</p>
+    </section>
+  </div>
+  

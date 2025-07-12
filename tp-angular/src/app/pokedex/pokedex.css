@@ -1,0 +1,79 @@
+.pokedex-container {
+    display: flex;
+    height: calc(100vh - 100px); /* ajustar según header o padding */
+    gap: 24px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .pokedex-section {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pokedex-section h1,
+  .pokedex-section h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+  }
+  
+  .pokemon-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start; /* cambio aquí */
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  }
+  
+
+  
+  /* Ajustar tamaño del app-pokemon-card */
+  app-pokemon-card {
+    width: 120px;
+    height: 160px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  app-pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffcb05;
+  }
+  
+  .pokedex-actions {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .pokedex-actions button {
+    background-color: #ff1c1c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pokedex-actions button:hover {
+    background-color: #cc1616;
+  }
+  
+
+  :host {
+    display: block;
+    min-height: 100vh;
+    background-image: url('../../assets/pokedex.jpeg'); /* o una URL remota */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

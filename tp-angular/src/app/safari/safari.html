@@ -1,0 +1,16 @@
+<h1 class="title">Safari</h1>
+
+<section class="pokemon-grid">
+  @for(pokemon of wildPokemon; track pokemon.id) {
+    <article class="pokemon-card">
+      <h3 class="pokemon-name">{{ pokemon.name }}</h3>
+      <img class="pokemon-sprite" src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}">
+      <button class="catch-button" (click)="catchPokemon(pokemon)">Capturar</button>
+    </article>
+  }
+</section>
+
+<section class="controls">
+  <h3 class="pokeball-count">Pokeball: {{ pokeBallCount }}</h3>
+  <button class="generate-button" (click)="generateWildPokemon()">Buscar Pokémon</button>
+</section>

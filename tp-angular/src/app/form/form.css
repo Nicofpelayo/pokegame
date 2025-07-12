@@ -1,0 +1,72 @@
+.feedback-form {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #222;
+    font-size: 1rem;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #0077ff;
+    outline: none;
+  }
+  
+  .error-msg {
+    color: #e53935;
+    font-size: 0.9rem;
+    margin-top: 6px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #0077ff;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005ecb;
+  }
+
+
+  :host {
+    display: block;
+    min-height: 100vh;
+    background-image: url('../../assets/safari.jpg'); /* o una URL remota */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  

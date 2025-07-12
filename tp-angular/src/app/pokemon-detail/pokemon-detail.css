@@ -1,0 +1,70 @@
+.pokemon-detail-container {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .description-section {
+    flex: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    padding-right: 24px;
+    border-right: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+  }
+  
+  .data-section {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pokemon-id {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #777;
+    margin-bottom: 24px;
+  }
+  
+  .pokemon-image {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    margin-bottom: 24px;
+  }
+  
+  .pokemon-name {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+  }
+  
+  .pokemon-types {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffcb05;
+    text-transform: capitalize;
+  }
+  
+
+  :host {
+    display: block;
+    min-height: 100vh;
+    background-image: url('../../assets/pokedex.jpeg'); /* o una URL remota */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

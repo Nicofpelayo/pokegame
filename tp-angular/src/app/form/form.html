@@ -1,0 +1,26 @@
+<h2>Tell us your experience!</h2>
+
+<form (submit)="enviarMensaje()" class="feedback-form" novalidate>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required minlength="3" maxlength="20" [(ngModel)]="formState.name" #name="ngModel" />
+    @if((name.dirty || name.touched) && name.errors){
+      <span class="error-msg">Your name must have between 3 and 20 characters</span>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required maxlength="30" [(ngModel)]="formState.email" #email="ngModel" />
+  </div>
+
+  <div class="form-group">
+    <label for="feedback">Feedback</label>
+    <input id="feedback" name="feedback" type="text" required minlength="20" [(ngModel)]="formState.feedback" #feedback="ngModel" />
+    @if((feedback.dirty || feedback.touched) && feedback.errors){
+      <span class="error-msg">We want to hear more, please write at least 20 characters</span>
+    }
+  </div>
+
+  <button type="submit" class="submit-btn">Send</button>
+</form>
